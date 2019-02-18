@@ -32,3 +32,6 @@ During the challenge I have encoutered some "situations" here my thoughts.
 - However the requirement was to use roles, used "ansigle-galaxy" to create the roles previously defined in the single file.
 - Added a role for creation of speciic VM groups based on meta info (i.e. web_server, db_servers)
 - I started the dynamic inventory from the provided example in the documentation, removed some unecessary code and added new code for grouping machine based on state.
+
+## Cloud Interface
+![alt text](https://github.com/Biohazardhpk/packstack-challenge/blob/master/cloud.PNG)
