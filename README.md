@@ -30,8 +30,8 @@ During the challenge I have encoutered some "situations" here my thoughts.
 ## Ansible configuration
 - The first instance I created was without defining roles, I made a .yml with all the variables and tags I needed for the task.
 - However the requirement was to use roles, used "ansigle-galaxy" to create the roles previously defined in the single file.
-- Added a role for creation of speciic VM groups based on meta info (i.e. web_server, db_servers)
-- I started the dynamic inventory from the provided example in the documentation, removed some unecessary code and added new code for grouping machine based on state.
+- Added a role for creation of specific VM groups based on meta info (i.e. web_server, db_servers)
+- I started the dynamic inventory from the provided example in the documentation, removed some unecessary code and added new code for grouping machines based on state.
 
 ## Cloud Interface
 ![alt text](https://github.com/Biohazardhpk/packstack-challenge/blob/master/cloud.PNG)
