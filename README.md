@@ -6,7 +6,7 @@ During the challenge I have encountered some "situations" here my thoughts.
 
 ## Vagrantfile
 - The file suggested to use port-forwarding to the machine (very nasty thing to do in VirtualBox).
-- In a controlled environment I suggest going with a bridge network, it eases work allot.
+- In a controlled environment I suggest going with a bridge network, it eases work allot (That is what I did).
 - Added installation of an FTP server client in order to get the packstack configuration file to the newly created Cloud Host.
 
 ## Cloud Environment
