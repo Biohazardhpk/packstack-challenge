@@ -1,0 +1,10 @@
+---
+# vars file for create_vm
+vm_name: test-instance
+vm_image: cirros
+vm_key_name: packstack
+vm_flavor: m1.tiny
+vm_network: public
+vm_security_groups: 
+  - test-security-group
+vm_register: my_instance

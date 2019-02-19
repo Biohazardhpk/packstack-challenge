@@ -1,0 +1,6 @@
+---
+names:
+  - vm_name: db1
+  - vm_name: db2
+vm_network: dbservers
+vm_meta: group=db_servers

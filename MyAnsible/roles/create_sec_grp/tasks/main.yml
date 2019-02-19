@@ -1,0 +1,7 @@
+---
+# tasks file for create_sec_grp
+- name: create security group
+  os_security_group:
+    state: present
+    name: "{{ sg_name_name }}"
+    description: "{{ sg_description }}"

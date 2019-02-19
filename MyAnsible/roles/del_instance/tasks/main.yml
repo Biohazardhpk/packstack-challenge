@@ -1,0 +1,6 @@
+---
+# tasks file for delete_vm
+- name: delete instance
+  os_server:
+    state: absent
+    name: "{{ del_name }}"

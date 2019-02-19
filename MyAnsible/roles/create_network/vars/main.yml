@@ -1,0 +1,4 @@
+---
+# vars file for create_network
+network_name: test-network
+network_type: false

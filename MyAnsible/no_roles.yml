@@ -1,0 +1,133 @@
+---
+### My PlayBook
+- name: OpenStack automation
+  hosts: localhost
+  vars:
+   # Network Vars
+   network_name: test-network
+   network_type: false
+   # Subnet Vars
+   sn_network_name: test-network
+   subnet_name: test-subnet
+   subnet_cidr: 192.168.1.0/24
+   # Router Vars
+   router_name: test-router
+   router_network: public
+   router_interfaces: 
+    - test-subnet
+   # Security_group Vars
+   sg_name: test-security-group
+   sg_description: Security group for our test instances
+   # Security_group Rule Vars
+   sg_rule: test-security-group
+   rule_protocol: icmp
+   rule_port_range_min: 
+   rule_port_range_max:
+   # Create VM Vars
+   vm_name: test-instance
+   vm_image: cirros
+   vm_key_name: packstack
+   vm_flavor: m1.small
+   vm_network: test-network
+   vm_security_groups: 
+    - test-security-group
+   vm_register: my_instance
+   # Create Flavor Vars
+   flavor_name: biohazard
+   flavor_disk: 20
+   flavor_interface: public
+   flavor_ram: 1024
+   flavor_vcpus: 2
+   # Create Flavor Vars
+   del_name: biohazard
+
+  tasks:
+  
+#Create Network  
+   - name: create network
+     tags: 
+      - network
+     os_network:
+      state: present
+      name: "{{ network_name }}"
+      external: "{{ network_type }}"
+      wait: yes
+
+# Create Subnet
+   - name: create subnet
+     tags:
+      - subnet
+     os_subnet:
+      state: present
+      network_name: "{{sn_network_name }}"
+      name: "{{ subnet_name }}"
+      cidr: "{{ subnet_cidr }}"
+      dns_nameservers:
+       - 8.8.8.8
+      wait: yes
+
+#Create Router    
+   - name: create a router
+     tags:
+      - router
+     os_router:
+      state: present
+      name: "{{ router_name }}"
+      network: "{{ router_network }}"
+      interfaces: "{{ router_interfaces }}"
+      
+#Create Security_group            
+   - name: create security group
+     tags:
+      - sec_grp
+     os_security_group:
+      state: present
+      name: "{{ sg_name_name }}"
+      description: "{{ sg_description }}"
+
+#Create Security_group rule           
+   - name: create security group rule
+     tags:
+      - rule
+     os_security_group_rule:
+      security_group: "{{ sg_rule }}"
+      protocol: "{{ rule_protocol }}"
+      port_range_min: "{{ rule_port_range_min }}"
+      port_range_max: "{{ rule_port_range_max }}"
+      remote_ip_prefix: 0.0.0.0/0
+
+ #Create Instance         
+   - name: create instance
+     tags:
+      - create_vm
+     os_server:
+      state: present
+      name: "{{ vm_name }}"
+      image: "{{ vm_image }}"
+      key_name: "{{ vm_key_name }}"
+      timeout: 200
+      flavor: "{{ vm_flavor }}"
+      network: "{{ vm_network }}"
+      auto_ip: yes
+      security_groups: "{{ vm_security_groups }}"
+     register: "{{ vm_register }}"
+
+ #Create Flavor  
+   - name: New Flavor
+     tags:
+      - flavor
+     os_nova_flavor:
+      state: present
+      name: "{{ flavor_name }}"
+      disk: "{{ flavor_disk }}"
+      interface: "{{ flavor_interface }}"
+      ram: "{{ flavor_ram }}"
+      vcpus: "{{ flavor_vcpus }}"
+
+#Delete VM
+   - name: delete instance
+     tags:
+      - del_vm
+     os_server:
+      state: absent
+      name: "{{ del_name }}"

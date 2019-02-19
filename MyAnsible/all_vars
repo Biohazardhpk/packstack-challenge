@@ -1,0 +1,54 @@
+###Available Roles###
+        create_flavor
+        create_instance
+        create_network
+        create_router
+        create_sec_grp
+        create_sec_grp_rules
+        create_subnet
+        del_instance
+        create_predefined_instances
+		
+####Configurable Variables###
+
+ # Network Vars
+   network_name: test-network
+   network_type: false
+ # Subnet Vars
+   sn_network_name: test-network
+   subnet_name: test-subnet
+   subnet_cidr: 192.168.1.0/24
+ # Router Vars
+   router_name: test-router
+   router_network: public
+   router_interfaces:
+    - test-subnet
+ # Security_group Vars
+   sg_name: test-security-group
+   sg_description: Security group for our test instances
+ # Security_group Rule Vars
+   sg_rule: test-security-group
+   rule_protocol: icmp
+   rule_port_range_min:
+   rule_port_range_max:
+ # Create VM Vars
+   vm_name: test-instance
+   vm_image: cirros
+   vm_key_name: packstack
+   vm_flavor: m1.small
+   vm_network: test-network
+   vm_security_groups:
+    - test-security-group
+   vm_register: my_instance
+ # Create Flavor Vars
+   f_name: biohazard
+   flavor_disk: 20
+   flavor_interface: public
+   flavor_ram: 1024
+   flavor_vcpus: 2
+ # Predifined flavors
+   flavor_name={small, big}
+ # Delete Instance Vars
+   del_name: biohazard
+ # Create server types
+   server_type={db_servers, web_servers.yml}

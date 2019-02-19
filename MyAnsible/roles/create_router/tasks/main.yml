@@ -1,0 +1,8 @@
+---
+# tasks file for create_router
+- name: create a router
+  os_router:
+    state: present
+    name: "{{ router_name }}"
+    network: "{{ router_network }}"
+    interfaces: "{{ router_interfaces }}"

@@ -1,0 +1,22 @@
+PLAY [VM process automation] ***************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [web1]
+ok: [web2]
+ok: [web3]
+
+TASK [debug] *******************************************************************
+ok: [web1] => {
+    "msg": "echo"
+}
+ok: [web2] => {
+    "msg": "echo"
+}
+ok: [web3] => {
+    "msg": "echo"
+}
+
+PLAY RECAP *********************************************************************
+web1                 : ok=2    changed=0    unreachable=0    failed=0
+web2                 : ok=2    changed=0    unreachable=0    failed=0
+web3                 : ok=2    changed=0    unreachable=0    failed=0

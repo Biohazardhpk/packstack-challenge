@@ -1,0 +1,23 @@
+---
+all:
+  hosts:
+    localhost:
+  vars:  
+    ansible_ssh_user: vagrant
+    ansible_ssh_private_key_file: /root/MyAnsible/cloud_key
+  children:
+    webservers:
+      hosts:
+        web1:
+        web2:
+        web3:
+      vars:
+        ansible_ssh_user: cirros
+        ansible_ssh_private_key_file: /root/MyAnsible/vm_key
+    dbservers:
+      hosts:
+        db1:
+        db2: 
+      vars: 
+        ansible_ssh_user: cirros
+        ansible_ssh_private_key_file: /root/MyAnsible/vm_key

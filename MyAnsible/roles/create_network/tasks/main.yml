@@ -1,0 +1,8 @@
+---
+# tasks file for create_network
+- name: create network
+  os_network:
+    state: present
+    name: "{{ network_name }}"
+    external: "{{ network_type }}"
+    wait: yes

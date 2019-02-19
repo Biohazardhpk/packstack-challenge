@@ -1,0 +1,6 @@
+---
+# vars file for router
+router_name: test-router
+router_network: public
+router_interfaces: 
+  - test-subnet

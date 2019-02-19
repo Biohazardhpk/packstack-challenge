@@ -1,0 +1,6 @@
+---
+# vars file for create_sec_grp_rules
+sg_rule: test-security-group
+rule_protocol: icmp
+rule_port_range_min: 
+rule_port_range_max:

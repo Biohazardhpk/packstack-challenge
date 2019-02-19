@@ -1,0 +1,12 @@
+---
+vm_name:
+  - web1
+  - web2
+  - web3
+#vm_network: webservers
+#vm_image: cirros
+#vm_key_name: packstack
+#vm_flavor: m1.tiny
+#vm_security_groups:
+#  - test-security-group
+#vm_register: my_instance

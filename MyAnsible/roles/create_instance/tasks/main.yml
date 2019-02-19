@@ -1,0 +1,14 @@
+---
+# tasks file for create_vm
+- name: create instance
+  os_server:
+    state: present
+    name: "{{ vm_name }}"
+    image: "{{ vm_image }}"
+    key_name: "{{ vm_key_name }}"
+    timeout: 60
+    flavor: "{{ vm_flavor }}"
+    network: "{{ vm_network }}"
+    auto_ip: yes
+    security_groups: "{{ vm_security_groups }}"
+  register: "{{ vm_register }}"

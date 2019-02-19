@@ -1,0 +1,7 @@
+---
+# vars file for create_big_flavor
+f_name: big
+flavor_disk: 30
+flavor_interface: public
+flavor_ram: 4096
+flavor_vcpus: 2

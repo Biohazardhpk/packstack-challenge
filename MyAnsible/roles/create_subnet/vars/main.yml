@@ -1,0 +1,5 @@
+---
+# vars file for create_subnet
+sn_network_name: test-network
+subnet_name: test-subnet
+subnet_cidr: 192.168.1.0/24

@@ -1,0 +1,12 @@
+---
+# tasks file for create_flavor
+- name: choose flavor
+  include_vars: "{{ flavor_name }}.yml"
+- name: New Flavor
+  os_nova_flavor:
+    state: present
+    name: "{{ f_name }}"
+    disk: "{{ flavor_disk }}"
+    interface: "{{ flavor_interface }}"
+    ram: "{{ flavor_ram }}"
+    vcpus: "{{ flavor_vcpus }}"

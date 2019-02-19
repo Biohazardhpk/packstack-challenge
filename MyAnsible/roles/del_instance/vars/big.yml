@@ -1,0 +1,7 @@
+---
+# vars file for create_vm
+f_name: big
+flavor_disk: 20
+flavor_interface: public
+flavor_ram: 1024
+flavor_vcpus: 2

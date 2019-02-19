@@ -1,0 +1,7 @@
+---
+names:
+  - vm_name: web1
+  - vm_name: web2
+  - vm_name: web3
+vm_network: webservers
+vm_meta: group=web_servers

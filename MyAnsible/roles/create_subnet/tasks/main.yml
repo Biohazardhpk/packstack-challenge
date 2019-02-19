@@ -1,0 +1,11 @@
+---
+# tasks file for create_subnet
+- name: create subnet
+  os_subnet:
+    state: present
+    network_name: "{{ sn_network_name }}"
+    name: "{{ subnet_name }}"
+    cidr: "{{ subnet_cidr }}"
+    dns_nameservers:
+      - 8.8.8.8
+    wait: yes

@@ -1,0 +1,9 @@
+- name: VM process automation
+  vars_prompt:
+    - name: 'hosts_group'
+      prompt: "Insert Target Host Group (web/db_servers, localhost, all)" 
+  hosts: "{{ hosts_group  }}"
+  tasks:
+   - name: debug
+     debug:
+       msg: "echo"

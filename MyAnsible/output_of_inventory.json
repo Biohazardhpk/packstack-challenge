@@ -1,0 +1,942 @@
+{
+  "_meta": {
+    "hostvars": {
+      "db1": {
+        "ansible_host": "", 
+        "ansible_ssh_host": "", 
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL", 
+          "OS-EXT-AZ:availability_zone": "nova", 
+          "OS-EXT-SRV-ATTR:host": "packstack", 
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+          "OS-EXT-SRV-ATTR:instance_name": "instance-00000019", 
+          "OS-EXT-STS:power_state": 1, 
+          "OS-EXT-STS:task_state": null, 
+          "OS-EXT-STS:vm_state": "active", 
+          "OS-SRV-USG:launched_at": "2019-02-17T23:31:26.000000", 
+          "OS-SRV-USG:terminated_at": null, 
+          "accessIPv4": "", 
+          "accessIPv6": "", 
+          "addresses": {
+            "dbservers": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ba:1d:68", 
+                "OS-EXT-IPS:type": "fixed", 
+                "addr": "192.168.1.3", 
+                "version": 4
+              }
+            ]
+          }, 
+          "adminPass": null, 
+          "az": "nova", 
+          "cloud": "envvars", 
+          "config_drive": "", 
+          "created": "2019-02-17T23:31:15Z", 
+          "created_at": "2019-02-17T23:31:15Z", 
+          "disk_config": "MANUAL", 
+          "flavor": {
+            "id": "1", 
+            "name": "m1.tiny"
+          }, 
+          "has_config_drive": false, 
+          "hostId": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "host_id": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "id": "72b794f1-2e16-429a-b7c9-bdb8d14a3fad", 
+          "image": {
+            "id": "58623701-e96d-48a8-8de9-8e9213bff4cc", 
+            "name": "cirros"
+          }, 
+          "interface_ip": "", 
+          "key_name": "packstack", 
+          "launched_at": "2019-02-17T23:31:26.000000", 
+          "location": {
+            "cloud": "envvars", 
+            "project": {
+              "domain_id": null, 
+              "domain_name": "Default", 
+              "id": "f269829c6b504bb4917fa442229202b1", 
+              "name": "admin"
+            }, 
+            "region_name": "", 
+            "zone": "nova"
+          }, 
+          "metadata": {
+            "group": "db_servers"
+          }, 
+          "name": "db1", 
+          "networks": {}, 
+          "os-extended-volumes:volumes_attached": [], 
+          "power_state": 1, 
+          "private_v4": "192.168.1.3", 
+          "progress": 0, 
+          "project_id": "f269829c6b504bb4917fa442229202b1", 
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL", 
+            "OS-EXT-AZ:availability_zone": "nova", 
+            "OS-EXT-SRV-ATTR:host": "packstack", 
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+            "OS-EXT-SRV-ATTR:instance_name": "instance-00000019", 
+            "OS-EXT-STS:power_state": 1, 
+            "OS-EXT-STS:task_state": null, 
+            "OS-EXT-STS:vm_state": "active", 
+            "OS-SRV-USG:launched_at": "2019-02-17T23:31:26.000000", 
+            "OS-SRV-USG:terminated_at": null, 
+            "os-extended-volumes:volumes_attached": []
+          }, 
+          "public_v4": "", 
+          "public_v6": "", 
+          "region": "", 
+          "security_groups": [
+            {
+              "description": "Default security group", 
+              "id": "512dace4-441c-4671-90b5-ac395e9dd103", 
+              "location": {
+                "cloud": "envvars", 
+                "project": {
+                  "domain_id": null, 
+                  "domain_name": "Default", 
+                  "id": "f269829c6b504bb4917fa442229202b1", 
+                  "name": "admin"
+                }, 
+                "region_name": "", 
+                "zone": null
+              }, 
+              "name": "default", 
+              "project_id": "f269829c6b504bb4917fa442229202b1", 
+              "properties": {}, 
+              "security_group_rules": [
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {
+                    "name": "default", 
+                    "tenant_id": "f269829c6b504bb4917fa442229202b1"
+                  }, 
+                  "id": "c19385c0-cdf3-4d7e-98e7-d246d86dccf2", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {
+                      "name": "default", 
+                      "tenant_id": "f269829c6b504bb4917fa442229202b1"
+                    }
+                  }, 
+                  "protocol": null, 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": null, 
+                  "security_group_id": "512dace4-441c-4671-90b5-ac395e9dd103", 
+                  "tenant_id": ""
+                }, 
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {
+                    "name": "default", 
+                    "tenant_id": "f269829c6b504bb4917fa442229202b1"
+                  }, 
+                  "id": "c566bdb9-83d5-45af-bfc7-e05aadfbf524", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {
+                      "name": "default", 
+                      "tenant_id": "f269829c6b504bb4917fa442229202b1"
+                    }
+                  }, 
+                  "protocol": null, 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": null, 
+                  "security_group_id": "512dace4-441c-4671-90b5-ac395e9dd103", 
+                  "tenant_id": ""
+                }
+              ], 
+              "tenant_id": "f269829c6b504bb4917fa442229202b1"
+            }
+          ], 
+          "status": "ACTIVE", 
+          "task_state": null, 
+          "tenant_id": "f269829c6b504bb4917fa442229202b1", 
+          "terminated_at": null, 
+          "updated": "2019-02-18T11:02:02Z", 
+          "user_id": "95819c8a5a3a4c4fbeabbafd5d690905", 
+          "vm_state": "active", 
+          "volumes": []
+        }
+      }, 
+      "db2": {
+        "ansible_host": "", 
+        "ansible_ssh_host": "", 
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL", 
+          "OS-EXT-AZ:availability_zone": "nova", 
+          "OS-EXT-SRV-ATTR:host": "packstack", 
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+          "OS-EXT-SRV-ATTR:instance_name": "instance-0000001a", 
+          "OS-EXT-STS:power_state": 1, 
+          "OS-EXT-STS:task_state": null, 
+          "OS-EXT-STS:vm_state": "active", 
+          "OS-SRV-USG:launched_at": "2019-02-17T23:32:41.000000", 
+          "OS-SRV-USG:terminated_at": null, 
+          "accessIPv4": "", 
+          "accessIPv6": "", 
+          "addresses": {
+            "dbservers": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:64:97:df", 
+                "OS-EXT-IPS:type": "fixed", 
+                "addr": "192.168.1.5", 
+                "version": 4
+              }
+            ]
+          }, 
+          "adminPass": null, 
+          "az": "nova", 
+          "cloud": "envvars", 
+          "config_drive": "", 
+          "created": "2019-02-17T23:32:26Z", 
+          "created_at": "2019-02-17T23:32:26Z", 
+          "disk_config": "MANUAL", 
+          "flavor": {
+            "id": "1", 
+            "name": "m1.tiny"
+          }, 
+          "has_config_drive": false, 
+          "hostId": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "host_id": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "id": "abe051ad-8616-44b3-9f78-15ef964f49eb", 
+          "image": {
+            "id": "58623701-e96d-48a8-8de9-8e9213bff4cc", 
+            "name": "cirros"
+          }, 
+          "interface_ip": "", 
+          "key_name": "packstack", 
+          "launched_at": "2019-02-17T23:32:41.000000", 
+          "location": {
+            "cloud": "envvars", 
+            "project": {
+              "domain_id": null, 
+              "domain_name": "Default", 
+              "id": "f269829c6b504bb4917fa442229202b1", 
+              "name": "admin"
+            }, 
+            "region_name": "", 
+            "zone": "nova"
+          }, 
+          "metadata": {
+            "group": "db_servers"
+          }, 
+          "name": "db2", 
+          "networks": {}, 
+          "os-extended-volumes:volumes_attached": [], 
+          "power_state": 1, 
+          "private_v4": "192.168.1.5", 
+          "progress": 0, 
+          "project_id": "f269829c6b504bb4917fa442229202b1", 
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL", 
+            "OS-EXT-AZ:availability_zone": "nova", 
+            "OS-EXT-SRV-ATTR:host": "packstack", 
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+            "OS-EXT-SRV-ATTR:instance_name": "instance-0000001a", 
+            "OS-EXT-STS:power_state": 1, 
+            "OS-EXT-STS:task_state": null, 
+            "OS-EXT-STS:vm_state": "active", 
+            "OS-SRV-USG:launched_at": "2019-02-17T23:32:41.000000", 
+            "OS-SRV-USG:terminated_at": null, 
+            "os-extended-volumes:volumes_attached": []
+          }, 
+          "public_v4": "", 
+          "public_v6": "", 
+          "region": "", 
+          "security_groups": [
+            {
+              "description": "Security group for our test instances", 
+              "id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+              "location": {
+                "cloud": "envvars", 
+                "project": {
+                  "domain_id": null, 
+                  "domain_name": "Default", 
+                  "id": "f269829c6b504bb4917fa442229202b1", 
+                  "name": "admin"
+                }, 
+                "region_name": "", 
+                "zone": null
+              }, 
+              "name": "test-security-group", 
+              "project_id": "f269829c6b504bb4917fa442229202b1", 
+              "properties": {}, 
+              "security_group_rules": [
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "a6c646cc-4898-4c9f-ae44-89daaba678a8", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "icmp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }, 
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "f1e23830-34df-4193-addf-a141f291005c", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": 22, 
+                  "port_range_min": 22, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "tcp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }
+              ], 
+              "tenant_id": "f269829c6b504bb4917fa442229202b1"
+            }
+          ], 
+          "status": "ACTIVE", 
+          "task_state": null, 
+          "tenant_id": "f269829c6b504bb4917fa442229202b1", 
+          "terminated_at": null, 
+          "updated": "2019-02-18T11:05:23Z", 
+          "user_id": "95819c8a5a3a4c4fbeabbafd5d690905", 
+          "vm_state": "active", 
+          "volumes": []
+        }
+      }, 
+      "web1": {
+        "ansible_host": "10.8.8.201", 
+        "ansible_ssh_host": "10.8.8.201", 
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL", 
+          "OS-EXT-AZ:availability_zone": "nova", 
+          "OS-EXT-SRV-ATTR:host": "packstack", 
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+          "OS-EXT-SRV-ATTR:instance_name": "instance-00000012", 
+          "OS-EXT-STS:power_state": 1, 
+          "OS-EXT-STS:task_state": null, 
+          "OS-EXT-STS:vm_state": "active", 
+          "OS-SRV-USG:launched_at": "2019-02-17T23:20:04.000000", 
+          "OS-SRV-USG:terminated_at": null, 
+          "accessIPv4": "10.8.8.201", 
+          "accessIPv6": "", 
+          "addresses": {
+            "public": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:47:d7:67", 
+                "OS-EXT-IPS:type": "fixed", 
+                "addr": "10.8.8.201", 
+                "version": 4
+              }
+            ]
+          }, 
+          "adminPass": null, 
+          "az": "nova", 
+          "cloud": "envvars", 
+          "config_drive": "", 
+          "created": "2019-02-17T23:19:50Z", 
+          "created_at": "2019-02-17T23:19:50Z", 
+          "disk_config": "MANUAL", 
+          "flavor": {
+            "id": "1", 
+            "name": "m1.tiny"
+          }, 
+          "has_config_drive": false, 
+          "hostId": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "host_id": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "id": "e1eb3684-5950-4edc-9d28-cf109c4da7fa", 
+          "image": {
+            "id": "58623701-e96d-48a8-8de9-8e9213bff4cc", 
+            "name": "cirros"
+          }, 
+          "interface_ip": "10.8.8.201", 
+          "key_name": "packstack", 
+          "launched_at": "2019-02-17T23:20:04.000000", 
+          "location": {
+            "cloud": "envvars", 
+            "project": {
+              "domain_id": null, 
+              "domain_name": "Default", 
+              "id": "f269829c6b504bb4917fa442229202b1", 
+              "name": "admin"
+            }, 
+            "region_name": "", 
+            "zone": "nova"
+          }, 
+          "metadata": {
+            "group": "web_servers"
+          }, 
+          "name": "web1", 
+          "networks": {}, 
+          "os-extended-volumes:volumes_attached": [], 
+          "power_state": 1, 
+          "private_v4": "", 
+          "progress": 0, 
+          "project_id": "f269829c6b504bb4917fa442229202b1", 
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL", 
+            "OS-EXT-AZ:availability_zone": "nova", 
+            "OS-EXT-SRV-ATTR:host": "packstack", 
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+            "OS-EXT-SRV-ATTR:instance_name": "instance-00000012", 
+            "OS-EXT-STS:power_state": 1, 
+            "OS-EXT-STS:task_state": null, 
+            "OS-EXT-STS:vm_state": "active", 
+            "OS-SRV-USG:launched_at": "2019-02-17T23:20:04.000000", 
+            "OS-SRV-USG:terminated_at": null, 
+            "os-extended-volumes:volumes_attached": []
+          }, 
+          "public_v4": "10.8.8.201", 
+          "public_v6": "", 
+          "region": "", 
+          "security_groups": [
+            {
+              "description": "Security group for our test instances", 
+              "id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+              "location": {
+                "cloud": "envvars", 
+                "project": {
+                  "domain_id": null, 
+                  "domain_name": "Default", 
+                  "id": "f269829c6b504bb4917fa442229202b1", 
+                  "name": "admin"
+                }, 
+                "region_name": "", 
+                "zone": null
+              }, 
+              "name": "test-security-group", 
+              "project_id": "f269829c6b504bb4917fa442229202b1", 
+              "properties": {}, 
+              "security_group_rules": [
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "a6c646cc-4898-4c9f-ae44-89daaba678a8", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "icmp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }, 
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "f1e23830-34df-4193-addf-a141f291005c", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": 22, 
+                  "port_range_min": 22, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "tcp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }
+              ], 
+              "tenant_id": "f269829c6b504bb4917fa442229202b1"
+            }
+          ], 
+          "status": "ACTIVE", 
+          "task_state": null, 
+          "tenant_id": "f269829c6b504bb4917fa442229202b1", 
+          "terminated_at": null, 
+          "updated": "2019-02-18T11:24:14Z", 
+          "user_id": "95819c8a5a3a4c4fbeabbafd5d690905", 
+          "vm_state": "active", 
+          "volumes": []
+        }
+      }, 
+      "web2": {
+        "ansible_host": "10.8.8.212", 
+        "ansible_ssh_host": "10.8.8.212", 
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL", 
+          "OS-EXT-AZ:availability_zone": "nova", 
+          "OS-EXT-SRV-ATTR:host": "packstack", 
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+          "OS-EXT-SRV-ATTR:instance_name": "instance-00000013", 
+          "OS-EXT-STS:power_state": 1, 
+          "OS-EXT-STS:task_state": null, 
+          "OS-EXT-STS:vm_state": "active", 
+          "OS-SRV-USG:launched_at": "2019-02-17T23:20:35.000000", 
+          "OS-SRV-USG:terminated_at": null, 
+          "accessIPv4": "10.8.8.212", 
+          "accessIPv6": "", 
+          "addresses": {
+            "public": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c2:68:1e", 
+                "OS-EXT-IPS:type": "fixed", 
+                "addr": "10.8.8.212", 
+                "version": 4
+              }
+            ]
+          }, 
+          "adminPass": null, 
+          "az": "nova", 
+          "cloud": "envvars", 
+          "config_drive": "", 
+          "created": "2019-02-17T23:20:17Z", 
+          "created_at": "2019-02-17T23:20:17Z", 
+          "disk_config": "MANUAL", 
+          "flavor": {
+            "id": "1", 
+            "name": "m1.tiny"
+          }, 
+          "has_config_drive": false, 
+          "hostId": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "host_id": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "id": "92c16246-faf4-474d-8572-2c104fa58656", 
+          "image": {
+            "id": "58623701-e96d-48a8-8de9-8e9213bff4cc", 
+            "name": "cirros"
+          }, 
+          "interface_ip": "10.8.8.212", 
+          "key_name": "packstack", 
+          "launched_at": "2019-02-17T23:20:35.000000", 
+          "location": {
+            "cloud": "envvars", 
+            "project": {
+              "domain_id": null, 
+              "domain_name": "Default", 
+              "id": "f269829c6b504bb4917fa442229202b1", 
+              "name": "admin"
+            }, 
+            "region_name": "", 
+            "zone": "nova"
+          }, 
+          "metadata": {
+            "group": "web_servers"
+          }, 
+          "name": "web2", 
+          "networks": {}, 
+          "os-extended-volumes:volumes_attached": [], 
+          "power_state": 1, 
+          "private_v4": "", 
+          "progress": 0, 
+          "project_id": "f269829c6b504bb4917fa442229202b1", 
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL", 
+            "OS-EXT-AZ:availability_zone": "nova", 
+            "OS-EXT-SRV-ATTR:host": "packstack", 
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+            "OS-EXT-SRV-ATTR:instance_name": "instance-00000013", 
+            "OS-EXT-STS:power_state": 1, 
+            "OS-EXT-STS:task_state": null, 
+            "OS-EXT-STS:vm_state": "active", 
+            "OS-SRV-USG:launched_at": "2019-02-17T23:20:35.000000", 
+            "OS-SRV-USG:terminated_at": null, 
+            "os-extended-volumes:volumes_attached": []
+          }, 
+          "public_v4": "10.8.8.212", 
+          "public_v6": "", 
+          "region": "", 
+          "security_groups": [
+            {
+              "description": "Security group for our test instances", 
+              "id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+              "location": {
+                "cloud": "envvars", 
+                "project": {
+                  "domain_id": null, 
+                  "domain_name": "Default", 
+                  "id": "f269829c6b504bb4917fa442229202b1", 
+                  "name": "admin"
+                }, 
+                "region_name": "", 
+                "zone": null
+              }, 
+              "name": "test-security-group", 
+              "project_id": "f269829c6b504bb4917fa442229202b1", 
+              "properties": {}, 
+              "security_group_rules": [
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "a6c646cc-4898-4c9f-ae44-89daaba678a8", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "icmp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }, 
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "f1e23830-34df-4193-addf-a141f291005c", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": 22, 
+                  "port_range_min": 22, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "tcp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }
+              ], 
+              "tenant_id": "f269829c6b504bb4917fa442229202b1"
+            }
+          ], 
+          "status": "ACTIVE", 
+          "task_state": null, 
+          "tenant_id": "f269829c6b504bb4917fa442229202b1", 
+          "terminated_at": null, 
+          "updated": "2019-02-18T11:23:41Z", 
+          "user_id": "95819c8a5a3a4c4fbeabbafd5d690905", 
+          "vm_state": "active", 
+          "volumes": []
+        }
+      }, 
+      "web3": {
+        "ansible_host": "10.8.8.205", 
+        "ansible_ssh_host": "10.8.8.205", 
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL", 
+          "OS-EXT-AZ:availability_zone": "nova", 
+          "OS-EXT-SRV-ATTR:host": "packstack", 
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+          "OS-EXT-SRV-ATTR:instance_name": "instance-00000014", 
+          "OS-EXT-STS:power_state": 1, 
+          "OS-EXT-STS:task_state": null, 
+          "OS-EXT-STS:vm_state": "active", 
+          "OS-SRV-USG:launched_at": "2019-02-17T23:21:05.000000", 
+          "OS-SRV-USG:terminated_at": null, 
+          "accessIPv4": "10.8.8.205", 
+          "accessIPv6": "", 
+          "addresses": {
+            "public": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:3f:71:1d", 
+                "OS-EXT-IPS:type": "fixed", 
+                "addr": "10.8.8.205", 
+                "version": 4
+              }
+            ]
+          }, 
+          "adminPass": null, 
+          "az": "nova", 
+          "cloud": "envvars", 
+          "config_drive": "", 
+          "created": "2019-02-17T23:20:50Z", 
+          "created_at": "2019-02-17T23:20:50Z", 
+          "disk_config": "MANUAL", 
+          "flavor": {
+            "id": "1", 
+            "name": "m1.tiny"
+          }, 
+          "has_config_drive": false, 
+          "hostId": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "host_id": "d10a910c5d96d67131855ad0d126369540cc3dc45f4d05b3ba1f5df8", 
+          "id": "c63776d9-c001-4951-abda-210a2c4a4ca5", 
+          "image": {
+            "id": "58623701-e96d-48a8-8de9-8e9213bff4cc", 
+            "name": "cirros"
+          }, 
+          "interface_ip": "10.8.8.205", 
+          "key_name": "packstack", 
+          "launched_at": "2019-02-17T23:21:05.000000", 
+          "location": {
+            "cloud": "envvars", 
+            "project": {
+              "domain_id": null, 
+              "domain_name": "Default", 
+              "id": "f269829c6b504bb4917fa442229202b1", 
+              "name": "admin"
+            }, 
+            "region_name": "", 
+            "zone": "nova"
+          }, 
+          "metadata": {
+            "group": "web_servers"
+          }, 
+          "name": "web3", 
+          "networks": {}, 
+          "os-extended-volumes:volumes_attached": [], 
+          "power_state": 1, 
+          "private_v4": "", 
+          "progress": 0, 
+          "project_id": "f269829c6b504bb4917fa442229202b1", 
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL", 
+            "OS-EXT-AZ:availability_zone": "nova", 
+            "OS-EXT-SRV-ATTR:host": "packstack", 
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": "packstack", 
+            "OS-EXT-SRV-ATTR:instance_name": "instance-00000014", 
+            "OS-EXT-STS:power_state": 1, 
+            "OS-EXT-STS:task_state": null, 
+            "OS-EXT-STS:vm_state": "active", 
+            "OS-SRV-USG:launched_at": "2019-02-17T23:21:05.000000", 
+            "OS-SRV-USG:terminated_at": null, 
+            "os-extended-volumes:volumes_attached": []
+          }, 
+          "public_v4": "10.8.8.205", 
+          "public_v6": "", 
+          "region": "", 
+          "security_groups": [
+            {
+              "description": "Security group for our test instances", 
+              "id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+              "location": {
+                "cloud": "envvars", 
+                "project": {
+                  "domain_id": null, 
+                  "domain_name": "Default", 
+                  "id": "f269829c6b504bb4917fa442229202b1", 
+                  "name": "admin"
+                }, 
+                "region_name": "", 
+                "zone": null
+              }, 
+              "name": "test-security-group", 
+              "project_id": "f269829c6b504bb4917fa442229202b1", 
+              "properties": {}, 
+              "security_group_rules": [
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "a6c646cc-4898-4c9f-ae44-89daaba678a8", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": null, 
+                  "port_range_min": null, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "icmp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }, 
+                {
+                  "direction": "ingress", 
+                  "ethertype": "IPv4", 
+                  "group": {}, 
+                  "id": "f1e23830-34df-4193-addf-a141f291005c", 
+                  "location": {
+                    "cloud": "envvars", 
+                    "project": {
+                      "domain_id": null, 
+                      "domain_name": "Default", 
+                      "id": "f269829c6b504bb4917fa442229202b1", 
+                      "name": "admin"
+                    }, 
+                    "region_name": "", 
+                    "zone": null
+                  }, 
+                  "port_range_max": 22, 
+                  "port_range_min": 22, 
+                  "project_id": "", 
+                  "properties": {
+                    "group": {}
+                  }, 
+                  "protocol": "tcp", 
+                  "remote_group_id": null, 
+                  "remote_ip_prefix": "0.0.0.0/0", 
+                  "security_group_id": "81d85944-ae4c-4819-8eb2-a89de695888f", 
+                  "tenant_id": ""
+                }
+              ], 
+              "tenant_id": "f269829c6b504bb4917fa442229202b1"
+            }
+          ], 
+          "status": "ACTIVE", 
+          "task_state": null, 
+          "tenant_id": "f269829c6b504bb4917fa442229202b1", 
+          "terminated_at": null, 
+          "updated": "2019-02-18T11:22:51Z", 
+          "user_id": "95819c8a5a3a4c4fbeabbafd5d690905", 
+          "vm_state": "active", 
+          "volumes": []
+        }
+      }
+    }
+  }, 
+  "active": [
+    "db1", 
+    "web3", 
+    "db2", 
+    "web2", 
+    "web1"
+  ], 
+  "db_servers": [
+    "db1", 
+    "db2"
+  ], 
+  "flavor-m1.tiny": [
+    "db1", 
+    "web3", 
+    "db2", 
+    "web2", 
+    "web1"
+  ], 
+  "image-cirros": [
+    "db1", 
+    "web3", 
+    "db2", 
+    "web2", 
+    "web1"
+  ], 
+  "instance-72b794f1-2e16-429a-b7c9-bdb8d14a3fad": [
+    "db1"
+  ], 
+  "instance-92c16246-faf4-474d-8572-2c104fa58656": [
+    "web2"
+  ], 
+  "instance-abe051ad-8616-44b3-9f78-15ef964f49eb": [
+    "db2"
+  ], 
+  "instance-c63776d9-c001-4951-abda-210a2c4a4ca5": [
+    "web3"
+  ], 
+  "instance-e1eb3684-5950-4edc-9d28-cf109c4da7fa": [
+    "web1"
+  ], 
+  "meta-group_db_servers": [
+    "db1", 
+    "db2"
+  ], 
+  "meta-group_web_servers": [
+    "web3", 
+    "web2", 
+    "web1"
+  ], 
+  "web_servers": [
+    "web3", 
+    "web2", 
+    "web1"
+  ]
+}

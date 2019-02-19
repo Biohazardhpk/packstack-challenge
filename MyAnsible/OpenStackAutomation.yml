@@ -1,0 +1,35 @@
+---
+
+### My PlayBook
+- name: OpenStack automation
+  hosts: localhost
+  roles:
+   - role: create_network
+     when: create_network|default(False)
+   
+   - role: create_subnet
+     when: create_subnet|default(False)
+
+   - role: create_router
+     when: create_router|default(False)
+
+   - role: create_sec_grp
+     when: create_sec_grp|default(False)
+
+   - role: create_sec_grp_rules
+     when: create_sec_grp_rules|default(False)
+
+   - role: create_flavor
+     flavor_name: "{{ flavor_name }}"
+     when: create_flavor|default(False)
+
+   - role: create_instance
+     when: create_instance|default(False)
+ 
+   - role: create_predefined_instances
+     when: create_predefined_instances|default(False)
+
+   - role: del_instance
+     when: del_instance|default(False)
+
+

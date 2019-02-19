@@ -1,0 +1,4 @@
+---
+# vars file for create_sec_grp
+sg_name: test-security-group
+sg_description: Security group for our test instances

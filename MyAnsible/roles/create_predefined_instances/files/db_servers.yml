@@ -1,0 +1,6 @@
+---
+name:
+  - db1
+  - db2
+vm_network: dbservers
+vm_flavor: m1.small
