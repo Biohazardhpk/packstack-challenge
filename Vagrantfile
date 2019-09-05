@@ -3,6 +3,8 @@
 
 Vagrant.configure(2) do |config|
 
+### Upload config file to VM ###
+    config.vm.synced_folder ".", "/home/vagrant/",  type: "rsync"	
 #Make it a bit more personal
   config.vm.box = "centos/7"
   config.vm.hostname = "packstack"
@@ -33,10 +35,7 @@ Vagrant.configure(2) do |config|
     sudo systemctl disable NetworkManager
     sudo systemctl stop NetworkManager
 	
-#Copy the openstack installer to the machine
-	sudo yum -y install wget
-	sudo wget ftp://mobaxterm:xxx@10.8.8.107/answers.txt
-	
+##Start the deployment
     packstack --answer-file=answers.txt
   SHELL
 end
