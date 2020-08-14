@@ -34,7 +34,10 @@ Vagrant.configure(2) do |config|
 
     sudo systemctl disable NetworkManager
     sudo systemctl stop NetworkManager
-	
+
+### Upload config file to VM ###
+#Please edit the below path to suit your respective local path. in the below example the answers.txt file should be placed in the home/vagrant folder
+  config.vm.synced_folder ".", "/home/vagrant/",  type: "rsync"	
 ##Start the deployment
     packstack --answer-file=answers.txt
   SHELL
